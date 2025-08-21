@@ -3,6 +3,7 @@ import { Routes, Route } from 'react-router-dom';
 import './App.css';
 import Home from './Home';
 import Project1 from './Project1';
+import Project2 from './Project2';
 
 function App() {
   return (
@@ -12,6 +13,8 @@ function App() {
         <Route path="/" element={<Home />} />
         {/* 프로젝트 1 */}
         <Route path="/project1" element={<Project1 />} />
+        {/* 프로젝트 2 */}
+        <Route path="/project2" element={<Project2 />} />
       </Routes>
     </div>
   );

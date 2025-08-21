@@ -14,7 +14,7 @@ function Home() {
         </Link>
         <Link to="/project2" className="project-card">
           <h2>프로젝트 2</h2>
-          <p>예시 프로젝트</p>
+          <p>김치이야기</p>
         </Link>
         <Link to="/project3" className="project-card">
           <h2>프로젝트 3</h2>
