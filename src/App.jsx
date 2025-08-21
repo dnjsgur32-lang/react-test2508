@@ -1,32 +1,20 @@
-        import React, { useState } from 'react'
-        import './App.css'
-        import Header from './comp1/Header';
-        import Slider from './comp1/Slider';
-        import Contents from './comp1/Contents';
-        import Footer from './comp1/Footer';
-        import Popup from './comp1/Popup';
+import React from 'react';
+import { Routes, Route } from 'react-router-dom';
+import './App.css';
+import Home from './Home';
+import Project1 from './Project1';
 
-        function App() {
-          const [isPopupOpen, setIsPopupOpen] = React.useState(false);
+function App() {
+  return (
+    <div>
+      <Routes>
+        {/* 메인 페이지 */}
+        <Route path="/" element={<Home />} />
+        {/* 프로젝트 1 */}
+        <Route path="/project1" element={<Project1 />} />
+      </Routes>
+    </div>
+  );
+}
 
-          const handleNoticeClick = (e) => {
-            e.preventDefault();
-            setIsPopupOpen(true);
-          };
-
-          const handleClosePopup = () => {
-            setIsPopupOpen(false);
-          };
-
-          return (
-            <div id='root'>
-              <Header />
-              <Slider />
-              <Contents onNoticeClick={handleNoticeClick}/>
-              <Footer />
-              {isPopupOpen && <Popup onClose={handleClosePopup}/>}
-            </div>
-          );
-        }
-
-        export default App
+export default App;
